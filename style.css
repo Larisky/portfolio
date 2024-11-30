@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #141414;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section Styling */
+#home.hero {
+    position: relative; /* To position the image and text properly */
+    height: 100vh; /* Full viewport height */
+    background: url('ss.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Ensures the image covers the full section */
+    color: #fff; /* White text color */
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding around the content */
+}
+
+/* Image Styling */
+.hero-img {
+    position: absolute; /* Absolute position to ensure the image stays behind the content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the section without distortion */
+    z-index: -1; /* Places the image behind the text */
+    animation: floatImage 6s ease-in-out infinite; /* Floating effect */
+}
+
+/* Floating Effect for Image */
+@keyframes floatImage {
+    0% {
+        transform: translateY(0); /* Initial position */
+    }
+    50% {
+        transform: translateY(-20px); /* Moves the image upwards */
+    }
+    100% {
+        transform: translateY(0); /* Moves back to original position */
+    }
+}
+
+
+   /* Sparkling Effect for Heading */
+.hero-text h1 {
+    font-size: 50px; /* Large text for the heading */
+    font-weight: 700; /* Bold text */
+    margin-bottom: 20px; /* Adds space between heading and paragraph */
+    text-align: center; /* Centers the heading */
+    animation: sparkleText 3s infinite; /* Sparkling animation */
+}
+
+/* Keyframes for Sparkling Effect */
+@keyframes sparkleText {
+    0% {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000;
+    }
+    20% {
+        text-shadow: 0 0 5px #ff7f00, 0 0 10px #ff7f00, 0 0 15px #ff7f00, 0 0 20px #ff7f00;
+    }
+    40% {
+        text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00, 0 0 20px #ffff00;
+    }
+    60% {
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
+    }
+    80% {
+        text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 15px #0000ff, 0 0 20px #0000ff;
+    }
+    100% {
+        text-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2, 0 0 15px #8a2be2, 0 0 20px #8a2be2;
+    }
+}
+
+
+.hero-text p {
+    font-size: 50px; /* Large text for the heading */
+    font-weight: 700; /* Bold text */
+    margin-bottom: 20px; /* Adds space between heading and paragraph */
+    text-align: center; /* Centers the heading */
+    animation: sparkleText 3s infinite; /* Sparkling animation */
+}
+
+/* Keyframes for Sparkling Effect */
+@keyframes sparkleText {
+    0% {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000;
+    }
+    20% {
+        text-shadow: 0 0 5px #ff7f00, 0 0 10px #ff7f00, 0 0 15px #ff7f00, 0 0 20px #ff7f00;
+    }
+    40% {
+        text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00, 0 0 20px #ffff00;
+    }
+    60% {
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
+    }
+    80% {
+        text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 15px #0000ff, 0 0 20px #0000ff;
+    }
+    100% {
+        text-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2, 0 0 15px #8a2be2, 0 0 20px #8a2be2;
+    }
+}
+
+/* Button Styling */
+.hero-text .btn {
+    background-color: #0a0a0a; /* Blue background for the button */
+    color: rgb(253, 251, 251); /* White text */
+    text-decoration: none; /* Remove underline from the link */
+    padding: 15px 30px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Larger font size for the button */
+    font-weight: bold; /* Bold button text */
+    transition: background-color 0.3s ease; /* Smooth transition when the button is hovered */
+    margin-top: 40px; /* Space above the button */
+}
+
+.hero-text .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Optional: Add a media query for responsiveness */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 35px; /* Smaller heading size on smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 16px; /* Smaller paragraph text */
+    }
+
+    .hero-text .btn {
+        padding: 12px 25px; /* Smaller button size */
+    }
+}
+
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+
+
+.progress-bar {
+    background-color: #ddd;
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* About Me Section Styling */
+#about {
+    font-size: 23px;
+    background-color: #f4f4f4; /* Light background for contrast */
+    padding: 40px 20px; /* Add padding to give space around the content */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 40px auto; /* Center the section with space around it */
+    max-width: 800px; /* Limit the width for better readability */
+}
+
+/* Style the header (h2) */
+#about h2 {
+    font-size: 36px; /* Make the header large */
+    font-weight: bold; /* Make the header bold */
+    color: #333; /* Dark color for the header */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    margin-bottom: 20px; /* Space below the header */
+    letter-spacing: 2px; /* Add spacing between letters */
+}
+
+/* Style the paragraph */
+#about p {
+    font-size: 18px; /* Larger text size for better readability */
+    font-weight: 500; /* Bold, but not as bold as the header */
+    color: #555; /* Slightly lighter color for the text */
+    line-height: 1.6; /* Increase line height for readability */
+    max-width: 700px; /* Limit the width of the text */
+    margin: 0 auto; /* Center the paragraph */
+    padding-top: 10px; /* Add some space between the paragraph and the header */
+}
+.btnc {
+    background-color: #0a0a0a; /* Blue background for the button */
+    color: rgb(253, 251, 251); /* White text */
+    text-decoration: none; /* Remove underline from the link */
+    padding: 15px 30px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Larger font size for the button */
+    font-weight: bold; /* Bold button text */
+    transition: background-color 0.3s ease; /* Smooth transition when the button is hovered */
+    margin-top: 100px; /* Space above the button */
+}
+
+/* Skills Section Styling */
+#skills {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 50px 20px; /* Add space around the section */
+    text-align: center; /* Center the content */
+    border-radius: 10px; /* Round corners for the section */
+    margin: 50px auto; /* Add space around the section */
+    max-width: 900px; /* Limit the width for readability */
+}
+
+
+/* Style the Skills Heading (h2) */
+#skills h2 {
+    font-size: 40px; /* Larger size for the heading */
+    font-weight: bold; /* Bold heading */
+    color: #333; /* Dark color for the heading */
+    text-transform: uppercase; /* Uppercase heading */
+    margin-bottom: 30px; /* Space between heading and skills */
+    letter-spacing: 3px; /* Add spacing between letters */
+}
+
+/* Style each skill box */
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Add space between each skill */
+}
+
+/* Individual Skill Box Styling */
+.skill {
+    width: 100%;
+    max-width: 500px; /* Limit the skill box width */
+    text-align: left; /* Align text to the left */
+}
+
+/* Style for the skill title (h3) */
+.skill h3 {
+    font-size: 22px; /* Font size for each skill name */
+    font-weight: bold; /* Bold the skill name */
+    color: #333; /* Dark color for text */
+    margin-bottom: 5px; /* Space below the skill name */
+}
+
+/* Progress Bar Container */
+.progress-bar {
+    height: 10px; /* Set height for the progress bar */
+    background-color: #ddd; /* Light gray background for the bar */
+    border-radius: 5px; /* Round the corners of the bar */
+    width: 0; /* Default width, will be set dynamically */
+    transition: width 1s ease-in-out; /* Smooth transition when width changes */
+}
+
+/* Color the progress bars based on the width */
+.skill:nth-child(1) .progress-bar {
+    background-color: #4CAF50; /* Green for HTML */
+}
+
+.skill:nth-child(2) .progress-bar {
+    background-color: #2196F3; /* Blue for CSS */
+}
+
+.skill:nth-child(3) .progress-bar {
+    background-color: #FFEB3B; /* Yellow for JavaScript */
+}
+
+.skill:nth-child(4) .progress-bar {
+    background-color: #61DBFB; /* Light Blue for React */
+}
+
+.skill:nth-child(5) .progress-bar {
+    background-color: #8CC84B; /* Green for Nodejs */
+}
+
+.skill:nth-child(6) .progress-bar {
+    background-color: #9C27B0; /* Purple for PHP */
+}
+
+.skill:nth-child(7) .progress-bar {
+    background-color: #4DBF76; /* Green for MongoDB */
+}
+
+/* Optional: Hover effect for skill titles */
+.skill h3:hover {
+    color: #007BFF; /* Change color on hover */
+    cursor: pointer;
+}
+/* Projects Section Styling */
+#projects {
+    padding: 50px 20px; /* Add space around the section */
+    background-color: #f7f7f7; /* Light background for contrast */
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 36px; /* Bigger heading */
+    font-weight: bold;
+    margin-bottom: 50px; /* Adds space below the heading */
+    color: #333; /* Dark grey text for the heading */
+}
+
+/* Project List (Flexbox for responsive grid layout) */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Create responsive grid */
+    gap: 30px; /* Space between projects */
+    justify-items: center; /* Centers the project cards */
+}
+
+/* Individual Project Card */
+.project {
+    background-color: #fff; /* White background for each project card */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    width: 100%; /* Ensure it fits within the container */
+    text-align: left; /* Align text to the left */
+}
+
+.project h3 {
+    font-size: 22px; /* Larger title for the project */
+    font-weight: 600;
+    margin-bottom: 10px; /* Space between the title and the description */
+    color: #007bff; /* Blue color for project titles */
+}
+
+.project p {
+    font-size: 16px; /* Slightly larger font for descriptions */
+    line-height: 1.5;
+    margin-bottom: 20px; /* Space between description and buttons */
+    color: #555; /* Dark grey for description text */
+}
+
+/* Hover Effect for Project Cards */
+.project:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Button Styling */
+.project .btn {
+    display: inline-block;
+    background-color: #007bff; /* Blue background for the buttons */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.project .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight movement on hover */
+}
+
+/* Optional: Add responsiveness for small screens */
+@media (max-width: 768px) {
+    #projects h2 {
+        font-size: 28px; /* Smaller heading on mobile */
+    }
+
+    .project h3 {
+        font-size: 18px; /* Adjust title size */
+    }
+
+    .project p {
+        font-size: 14px; /* Smaller paragraph text */
+    }
+
+    .project .btn {
+        padding: 10px 20px; /* Adjust button padding */
+    }
+}
+/* Contact Section Styling */
+#contact {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Icons Container */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Individual Contact Icon */
+.contact-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    width: 120px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: translateY(-5px);
+    color: #007bff;
+}
+
+.contact-icon i {
+    font-size: 40px; /* Size of the icon */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover i {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 28px;
+    }
+
+    #contact p {
+        font-size: 16px;
+    }
+
+    .contact-icons {
+        gap: 20px;
+    }
+
+    .contact-icon {
+        width: 100px;
+    }
+
+    .contact-icon i {
+        font-size: 35px;
+    }
+}
